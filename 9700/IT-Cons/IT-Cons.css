@@ -1,0 +1,280 @@
+@font-face {
+	font-family: 'Conv_TrajanPro3-Regular';
+	src: url('fonts/TrajanPro3-Regular.eot');
+	src: local('☺'), url('fonts/TrajanPro3-Regular.woff') format('woff'), url('fonts/TrajanPro3-Regular.ttf') format('truetype'), url('fonts/TrajanPro3-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*-----------------------НАСТРОЙКИ-ШРИФТОВ-----------------------------*/
+
+h1, h2, h3, h4, h5, h6, a, p, .dropcap-normal, .dropcap, .counters li, .counters li span, a.newave-button, .ultralarge, .four-zero-four, .text-slide-vertical, .project-counters .counters li .count, .company-phone a, #contact-formular input[type="text"], #contact-formular input[type="email"], input[type="password"], textarea, #contact-formular input[type="submit"], input[type="submit"], #commentsform input[type="text"], textarea, input#search, .navbar .nav > li > a, .newave-newsletter input[type="email"], .button-contact-cons {
+  font-family: "Trajan Pro 3", sans-serif !important;
+	color: #fff;
+}
+
+@media (min-device-width: 1024px) {
+.header-title {
+	font-size: 6vmin;
+	line-height: 9vmin;
+}
+
+.header-subtitle {
+	font-size: 3vmin;
+	line-height: 5vmin;
+}
+
+.newave-button.medium.outline.white {
+	font-size: 1.5vmin;
+}
+
+.about-title {
+	font-size: 3.5vmin;
+	line-height: 5vmin;
+}
+
+.about-text {
+	font-size: 1.5vmin;
+	line-height: 3vmin;
+}
+
+.button-contact-cons {
+	font-size: 2vmin;
+}
+}
+
+/*-----------------------КНОПКА-СВЯЗИ-----------------------------*/
+
+.button-contact-cons {
+	border: 2px solid rgba(164,73,108,1);
+	padding: 1.5vmin;
+	border-radius: 8px;
+}
+
+/*-----------------------ТЕМНОСИНИЙ-ЦВЕТ-ЗАПОЛНЕНИЯ-ТЕКСТА-----------------------------*/
+
+a:hover {
+	color: #37374f !important;
+}
+
+/*-----------------------НАСТРОЙКИ-МЕНЮ-----------------------------*/
+
+.navbar-inner {
+	background: rgba(34,32,51,1) !important;
+	padding: 0 !important;
+}
+
+@media (min-device-width: 1024px) and (orientation: landscape) {
+#nav {
+	display: flex;
+}
+
+.navbar .nav > li {
+	display: inline-flex !important;
+	flex: 1 100%;
+	text-align: center;
+}
+
+.navbar .nav > li > a {
+	width: 100%;
+	text-transform: uppercase !important;
+	line-height: 65px !important;
+	padding: 0 !important;
+}
+
+#logo {
+  display: none;
+}
+
+.navbar .nav > li, .collapse_menu1 {
+  border-bottom: 2px solid transparent;
+}
+
+.collapse_menu1:hover, .navbar .nav > .active > a  {
+	color: rgba(132,132,132,1) !important;
+	border-bottom: 2px solid rgba(39,166,216,1);
+}
+}
+
+/*-----------------------HEADER-----------------------------*/
+
+#header {
+	background: url("/wp-content/uploads/2016/10/IMAGE-Busy_Employee-min.jpeg") center center/ cover no-repeat;
+}
+
+#header:before {
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	background: rgba(78,44,65,.7);
+	position: absolute;
+}
+
+.header-title {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 35vh;
+}
+
+.header-subtitle {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 60vh;
+}
+
+.newave-button.medium.outline.white {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 15vh;
+	margin: auto 35vw;
+}
+
+/*-----------------------ABOUT-----------------------------*/
+
+#about {
+	height: 100vh;
+	background: url(/wp-content/uploads/2016/10/pic04-min.jpeg) center center/cover no-repeat;
+}
+
+#about:before {
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	background: rgba(141,167,187,.4);
+	position: absolute;
+	z-index: -1;
+}
+
+.about-title {
+	position: absolute;
+	left: 0;
+	top: 10vh;
+	width: 35vw;
+	padding-left: 5vw;
+}
+
+.about-text {
+	position: absolute;
+	left: 0;
+	top: 30vh;
+	width: 30vw;
+	padding-left: 5vw;
+	text-transform: inherit !important;
+}
+
+#about .button-contact-container {
+	position: absolute;
+	left: 0;
+	bottom: 12vh;
+	padding-left: 5vw;
+}
+
+/*-----------------------BENEFITS-----------------------------*/
+
+#benefits {
+	height: 100vh;
+	background: url(/wp-content/uploads/2016/10/img1-min.jpeg) center center/cover no-repeat;
+}
+
+#benefits:before {
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	background: rgba(164,73,108,.5);
+	position: absolute;
+	z-index: -1;
+}
+
+.benefits-title {
+	position: absolute;
+	right: 0;
+	top: 10vh;
+	width: 30vw;
+	padding-right: 5vw;
+}
+
+.benefits-text {
+	position: absolute;
+	right: 0;
+	top: 30vh;
+	width: 30vw;
+	padding-right: 5vw;
+	text-transform: inherit !important;
+}
+
+#benefits .button-contact-container {
+	position: absolute;
+	right: 0;
+	bottom: 12vh;
+	padding-right: 5vw;
+}
+
+/*-----------------------CONTACTS-----------------------------*/
+
+#contacts {
+	height: 100vh;
+	background: url(/wp-content/uploads/2016/10/concierge1-min.jpeg) center center/cover no-repeat;
+}
+
+#contacts:before {
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	background: rgba(86,119,169,.55);
+	position: absolute;
+	z-index: -1;
+}
+
+.contacts-title {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 10vh;
+	text-align: center;
+	width: 50vw;
+	margin: auto;
+}
+
+.contacts-subtitle {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 30vh;
+	text-align: center;
+	width: 70vw;
+	margin: auto;
+}
+
+.contacts-call-container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 55vh;
+}
+
+#contacts .button-contact-container {
+	position: absolute;
+	left: 15vw;
+}
+
+.button-callback-cons {
+	position: absolute;
+	right: 15vw;
+}
+
+.contacts-phone-number {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 10vh;
+	text-align: center;
+}
+
+/*-----------------------FOOTER-----------------------------*/
+
+footer {
+	background-color: rgba(34,32,51,1) !important;
+}

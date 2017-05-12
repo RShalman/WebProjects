@@ -1,0 +1,1662 @@
+@font-face {
+	  font-family: 'Conv_LT Oksana';
+	  src: url('/wp-content/themes/newave-theme/fonts/LT Oksana.eot');
+	  src: local('☺'), url('/wp-content/themes/newave-theme/fonts/LT Oksana.woff') format('woff'), url('fonts/LT Oksana.ttf') format('truetype'), url('fonts/LT Oksana.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*----------------------------НАСТРОЙКИ ШРИФТОВ-----------------------------*/
+html, body, count, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, small, sub, b, dl, dd, dt, ul, li, label, article, details, footer, header, menu, nav, input, select, td, textarea, th {
+  font-family: 'Conv_LT Oksana' !important;
+	color: rgba(255, 255, 255, 1);
+  font-style: normal !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: geometricPrecision;
+  text-transform: initial !important;
+  font-weight: 300 !important;
+}
+
+h1, .h1-size, .entry-title.h1-size, h1.entry-title, .dt-accordion-h1-size .wpb_accordion_header > a {
+  font-size: 8vmin !important;
+  line-height: 10vmin !important;
+}
+
+h2, .h2-size, .entry-title.h2-size, h2.entry-title, .dt-accordion-h2-size .wpb_accordion_header > a, .mobile-main-nav li > a .menu-text, .count, .toggle-title, .wpcf7-submit, input[type="tel"], .blog-title, .blog-title a {
+  font-size: 7vmin !important;
+  line-height: 7vmin !important;
+}
+
+h3, input[type="email"], .h3-size, .entry-title.h3-size, h3.entry-title, .dt-accordion-h3-size .wpb_accordion_header > a {
+  font-size: 3.5vmin !important;
+  line-height: 4vmin !important;
+}
+
+h4, input[type="text"], .help-block, .h4-size, .entry-title.h4-size, h4.entry-title, .dt-accordion-h4-size .wpb_accordion_header > a, #blog .type-date h5, .tsh-msg-body {
+  font-size: 2.5vmin !important;
+  line-height: 4vmin !important;
+}
+
+h5, .h5-size, .entry-title.h5-size, h5.entry-title, .dt-accordion-h5-size .wpb_accordion_header > a, .tsh-msg-header, .tsh-time, .navbar .nav > li > a {
+  font-size: 2vmin !important;
+  line-height: 3.5vmin !important;
+}
+
+h6, .h6-size, .entry-title.h6-size, h6.entry-title, .dt-accordion-h6-size .wpb_accordion_header > a {
+  font-size: 1.5vmin !important;
+  line-height: 3.5vmin !important;
+}
+
+@media (max-device-width: 1023px) {
+h1, .h1-size, .entry-title.h1-size, h1.entry-title, .dt-accordion-h1-size .wpb_accordion_header > a {
+  font-size: 10vmin !important;
+  line-height: 15vmin !important;
+}  
+  
+h2, .counter_prefix, .stats-number, .counter_suffix, .h2-size, .entry-title.h2-size, h2.entry-title, .dt-accordion-h2-size .wpb_accordion_header > a, .stats-block *, .count, .toggle-title, .wpcf7-submit, input[type="tel"], .blog-title, .blog-title a {
+  font-size: 10vmin !important;
+  line-height: 10vmin !important;
+}
+
+h3, .h3-size, .entry-title.h3-size, h3.entry-title, .dt-accordion-h3-size .wpb_accordion_header > a, input[type="text"],  input[type="email"], .navbar .nav > li > a {
+  font-size: 4.5vmin !important;
+  line-height: 6vmin !important;
+}
+
+h4, .help-block, .h4-size, .entry-title.h4-size, h4.entry-title, .dt-accordion-h4-size .wpb_accordion_header > a, #blog .type-date h5, .tsh-msg-body {
+  font-size: 4vmin !important;
+  line-height: 6vmin !important;
+}
+
+h5, .h5-size, .entry-title.h5-size, h5.entry-title, .dt-accordion-h5-size .wpb_accordion_header > a, .tsh-msg-header, .tsh-time {
+  font-size: 3.5vmin !important;
+  line-height: 4.5vmin !important;
+}
+
+h6, .h6-size, .entry-title.h6-size, h6.entry-title, .dt-accordion-h6-size .wpb_accordion_header > a {
+  font-size: 2.5vmin !important;
+  line-height: 3.5vmin !important;
+}
+}
+
+.menu-item:nth-child(n+2) > a:hover, .navbar .nav > .active > a {
+	color: rgba(3, 255, 179, 1) !important;
+}
+
+.nav > li:nth-child(n+2) > a {
+  color: rgba(255,255,255,1) !important;
+}
+
+/*----------------------------ОСНОВНЫЕ НАСТРОЙКИ МЕНЮ-----------------------------*/
+.navbar .nav{
+  display: -webkit-box;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+@media (min-device-width: 1280px) and (orientation: landscape) {
+.navbar-inner {
+	min-height: 100px !important;
+	padding: 0px !important;
+}
+}
+
+@media (min-device-width: 1024px) and (orientation: portrait)  {
+.navbar-inner {
+	margin: auto !important;
+}
+}
+
+#navigation {
+  z-index: 99999;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+  border-width: 0px !important;
+}
+
+.navbar .nav {
+  float: none !important;
+}
+
+.navbar .nav > li {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex: 1 auto;
+  flex: 1 auto;
+  -webkit-align-self: center;
+  align-self: center;
+}
+
+.navbar .nav > li > a {
+  text-transform: uppercase !important;
+  padding: 0 !important;
+  margin: auto;
+}
+
+@media (orientation: portrait), (min-device-width: 1024px) {
+  .navbar .nav > li > a {
+  line-height: 45px !important;
+}
+}
+
+@media(min-device-width: 1024px) and (orientation: landscape) {
+  .navbar .nav > li > a {
+    font-size: 15px !important;
+  }
+}
+
+.navbar .nav > li {
+  height: 100px;
+}
+
+.navbar .nav > li > a[href$="/map/"], .navbar .nav > li > a[href*="#header"], .navbar .nav > li > a[href$="/map/"]:hover, .navbar .nav > li > a[href*="#header"]:hover, .navbar .nav > li > a[href$="/map/"]:focus, .navbar .nav > li > a[href*="#header"]:focus {
+  color: transparent !important;
+}
+
+.nav-collapse {
+  margin-top: -1px;
+}
+
+@media (max-device-width: 1279px), (min-device-width: 1280px) and (orientation: portrait) {
+
+.navbar .show-menu {
+  position: relative !important;
+  right: 0;
+  top: 0;
+  padding-left: 20px !important;
+  z-index: 100;
+}
+
+.collapse.in, .nav-collapse {
+  background: rgba(25, 195, 229, .90);
+  padding: 0 !important;
+}
+
+.collapse.in {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+
+.collapse {
+  -webkit-transform: translate3d(100vw,0,0);  
+  transform: translate3d(100vw,0,0);
+  height: 100% !important;
+  -webkit-transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+
+.nav-collapse {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar .nav {
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  text-align: center;
+  -webkit-flex: 1 100%;
+  flex: 1 100%;
+  height: calc(100% - 45px) !important;
+  margin: auto;
+}
+
+.navbar .nav > li {
+  border: none !important;
+}
+
+.navbar .nav > li > a {
+  padding: 0 !important;
+  border: none !important;
+}
+
+.navbar .nav > li > a[href$="/map/"] {
+  background-position: left !important;
+}
+
+.navbar .nav > li > a[href*="#header"], .navbar .nav > li > a[href$="/map/"] {
+  width: 100% !important;
+  -webkit-filter: none;
+  filter: none;
+}
+
+.navbar .nav > li > a[href*="#header"]:hover, .navbar .nav > li > a[href$="/map/"]:hover {
+  -webkit-filter: invert(100%) drop-shadow(0px 0px .5px rgba(87,235,107,1));
+  filter: invert(100%) drop-shadow(0px 0px .5px rgba(87,235,107,1));
+}
+
+.navbar .show-menu {
+  background: none;
+  font-size: 37px;
+  margin: 5px auto 0;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  line-height: 37px;
+  opacity: .75;
+  width: 37px;
+}
+
+.navbar .show-menu:before {
+  content: "≡";
+}
+}
+
+/*----------------МЕНЮ--------------------*/
+
+.animsition-loading {
+    position: fixed;
+    background: url(/wp-content/uploads/2017/02/Logo-mironova.svg) center/contain no-repeat;
+    top: 40vh;
+    z-index: 100;
+    width: 20vh;
+    height: 20vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.animsition-loading:after {
+  content: '';
+  background: trasparent;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  border-radius: 100%;
+  top: -20%;
+  left: -20%;
+  opacity: 0.7;
+  box-shadow: rgba(60,0,252,.5) -3px -5px 5px -1px;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+#nav {
+  display: flex;
+}
+
+.navbar .nav {
+	margin: 0 !important;
+}
+
+.navbar .nav > li {
+	display: inline-flex;
+}
+
+.navbar .nav > li > a {
+	width: 100%;
+	text-align: center;
+}
+
+.navbar-inner { 
+background: rgba(25,195,229,1);
+}
+
+@media (max-device-width: 1279px), (min-device-width: 1280px) and (orientation: portrait) {
+#logo {
+    margin: auto 1vw;
+    display: block;
+  }
+  
+#logo a {
+  position: relative;
+  background: url(/wp-content/uploads/2017/02/Logo-mironova.svg) center/contain no-repeat !important;
+  margin: auto 1vw;
+  width: 90px;
+}
+
+#logo a img {
+  display: none;
+}
+  
+#nav {
+  flex-flow: row wrap;
+}
+
+#nav .menu-item:nth-child(1) {
+  display: none;
+}
+
+.navbar .nav > li {
+  height: auto;
+  width: 100vw;
+}
+
+.navbar .nav> li > a {
+  text-shadow: 0 0 10px darkblue;
+}
+
+.navbar .show-menu {
+  display: block;
+}
+}
+
+@media (min-device-width: 1280px) and (orientation: landscape) {
+a[href="http://ira-mironova.ru"] {
+    color: transparent !important;
+    background: url(/wp-content/uploads/2017/02/Logo-mironova.svg) center/contain no-repeat;
+    min-height: 100px;
+}
+  
+.nav-collapse, .nav-collapse.collapse {
+	overflow: visible !important;
+}
+
+#navigation.is-sticky .menu-item {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  opacity: 1;
+  -webkit-transition: -webkit-transform .5s ease-in-out, opacity .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out, opacity .5s ease-in-out;
+  -webkit-transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+#navigation:not(.is-sticky) .menu-item {
+  -webkit-transform: translate3d(-8vw,0,0);
+  transform: translate3d(-8vw,0,0);
+  opacity: 0;
+  -webkit-transition: -webkit-transform .5s ease-in-out, opacity .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out, opacity .5s ease-in-out;
+  -webkit-transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+  
+#navigation:not(.is-sticky) .menu-item:nth-child(1), #navigation.is-sticky .menu-item:nth-child(1) {
+  transition-delay: 0.1s;
+}  
+
+#navigation:not(.is-sticky) .menu-item:nth-child(2), #navigation.is-sticky .menu-item:nth-child(2) {
+  transition-delay: 0.2s;
+}  
+
+#navigation:not(.is-sticky) .menu-item:nth-child(3), #navigation.is-sticky .menu-item:nth-child(3) {
+  transition-delay: 0.3s;
+}  
+
+#navigation:not(.is-sticky) .menu-item:nth-child(4), #navigation.is-sticky .menu-item:nth-child(4) {
+  transition-delay: 0.4s;
+}  
+
+#navigation:not(.is-sticky) .menu-item:nth-child(5), #navigation.is-sticky .menu-item:nth-child(5) {
+  transition-delay: 0.5s;
+}  
+
+#navigation:not(.is-sticky) .menu-item:nth-child(6), #navigation.is-sticky .menu-item:nth-child(6) {
+  transition-delay: 0.6s;
+}  
+
+#navigation:not(.is-sticky) .menu-item:nth-child(7), #navigation.is-sticky .menu-item:nth-child(7) {
+  transition-delay: 0.7s;
+}  
+
+#navigation:not(.is-sticky) .menu-item:nth-child(8), #navigation.is-sticky .menu-item:nth-child(8) {
+  transition-delay: 0.8s;
+}  
+
+#navigation:not(.is-sticky) .menu-item:nth-child(9), #navigation.is-sticky .menu-item:nth-child(9) {
+  transition-delay: 0.9s;
+}  
+
+#navigation:not(.is-sticky) .menu-item:nth-child(10), #navigation.is-sticky .menu-item:nth-child(10) {
+  transition-delay: 1s;
+}  
+
+.navbar .nav > li > a {
+	height: auto !important;
+}
+
+.navbar-inner {
+  padding: 0 !important;
+}
+}
+
+
+/*----------------HEADER--------------------*/
+#header {
+    background: url(/wp-content/uploads/2017/02/Header-Mironova.jpg) center/contain no-repeat;
+}
+
+#header:before {
+    content: '';
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+#home-center {
+    margin: auto !important;
+    width: 100% !important;
+    overflow: hidden;
+}
+
+#header .header-text {
+    z-index: 5;
+    position: relative;
+    width: 100%;
+}
+
+a[href="#special-offer"] {
+    z-index: 5;
+}
+
+#video-header {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    margin: 0 !important;
+    height: auto !important;
+    top: 0;
+}
+
+@media (max-device-width: 1279px) {
+  #video-header {
+    display: none;
+  }
+}
+
+/*----------------АКЦИЯ--------------------*/
+
+section {
+  min-height: calc(100vh - 44px) !important;
+}
+
+.row-fluid {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.order-button-text, .newave-button {
+    background: rgba(3,255,179,1);
+    min-height: 6vh;
+    margin: auto;
+    line-height: 6vh!important;
+    border-radius: 20px;
+    position: relative;
+    top: 4vh;
+    box-shadow: 0 0 12px 1px #00008b;
+    font-size: 4vmin;
+    padding: 1vmin 3vmin;
+    border: 3px solid rgba(46,187,227,1);
+    transition: all .3s ease-in-out;
+}
+
+.order-button-text:hover, .newave-button:hover {
+    color: rgba(3,255,179,1);
+    background: rgba(46,187,227,1);
+    border-color: rgba(255,255,255,1);
+    box-shadow: 0 0 12px 2px rgba(255,255,255,1);
+    transition: all .3s ease-in-out;
+}
+
+.order-button {
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+@media (max-device-width: 1023px) and (orientation: portrait) {
+  .order-button-text {
+    font-size: 6vmin;
+    padding: 2vmin 6vmin;
+}
+}
+
+#special-offer {
+    background: rgba(216,238,65,1);
+    z-index: 2;
+}
+
+h3[class$="-header"]:not(.graduation-header) {
+    position: relative;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 7vh;
+    margin: 0 auto;
+    border-bottom: 3px solid rgba(3, 255, 179, 1);
+    text-shadow: 0 0 1vmin #00008b;
+}
+
+.special-event-header {
+	text-align: center;
+	position: relative;
+	top: 5vh;
+}
+
+.special-event {
+	margin: 10vh 5vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	top: 5vh;
+	width: 100%;
+}
+
+.special-event-one, .special-event-two, .special-event-three {
+	flex: 1 auto;
+	display: inline-flex;
+	flex-direction: column;
+	margin: 1vh 2vw;
+	align-items: center;
+	margin-bottom: 10vh;
+}
+
+.special-event-one-img, .special-event-two-img, .special-event-three-img {
+	height: 40vh;
+	width: 40vh;
+	background: red;
+}
+
+.special-event-one-img {
+      background: url(/wp-content/uploads/2017/02/vipusk_v_sadu.jpg)white center/70% no-repeat;
+}
+
+.special-event-two-img {
+      background: url(/wp-content/uploads/2017/02/vipusk_v_nach_klassah.jpg)white center/70% no-repeat;
+}
+
+.special-event-three-img {
+      background: url(/wp-content/uploads/2017/02/vipusk_v_9-11.jpg)white center/70% no-repeat;
+}
+
+div[class^="special-event-"] div[class$="-img"] * {
+    position: relative;
+    text-shadow: 0 0 15px #00008b;
+    max-width: 40vh;
+    margin: auto;
+}
+
+div[class^="special-event-"] div[class$="-img"]:before {
+    content: '';
+    background: rgba(0,0,139,.2);
+    height: 40vh;
+    width: 40vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+
+.special-event-one-header, .special-event-two-header, .special-event-three-header {
+	text-align: center;
+	margin: 2vh auto;
+}
+
+.special-event-one-price, .special-event-two-price, .special-event-three-price {
+	text-align: center;
+}
+
+@media (max-device-width: 1023px), (min-device-width: 1024px) {
+  .special-event div[class$="-img"] * {
+    position: relative;
+    top: 15vh;
+    text-shadow: 0 0 15px darkblue;
+    max-width: 35vh;
+}
+}
+
+@media (max-device-width: 1023px) and (orientation: landscape) {
+  .special-event div[class$="-img"] * {
+    top: 7vh;
+}
+
+.special-event {
+    margin: auto;
+    top: 25vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+}
+
+div[class$="-img"] {
+    position: relative;
+    box-shadow: 0 0 40px 5px grey;
+    border-radius: 20px;
+}
+
+/*----------------ПЕРСОНАЖИ--------------------*/
+
+#characters {
+    background: url(/wp-content/uploads/2017/02/char-page-background.svg) rgba(216,238,65,1) center/cover;
+}
+
+.characters {
+	margin: 10vh 5vw;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.characters-box {
+	flex: 1 25%;
+	flex-direction: column;
+	text-align: center;
+	display: inline-flex;
+	margin: 5vh;
+}
+
+.characters-box-header {
+  height: 7vmin;
+  margin: 5vh auto;
+}
+
+.characters-img {
+	height: 40vh;
+	background: red;
+	margin: auto;
+	width: 40vh;
+}
+
+.characters-missing {
+    width: 100vw;
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    min-height: 10vh;
+}
+
+
+div[class$="-box"] .characters-box-header {
+    position: relative;
+    top: 30vh;
+    text-shadow: 0 0 15px #00008b;
+    max-width: 35vh;
+    z-index: 9999;
+}
+
+.characters-one-img {
+    background: url(/wp-content/uploads/2017/02/Принцесса-Бэль.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-two-img {
+    background: url(/wp-content/uploads/2017/02/Рапунцель.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-three-img {
+    background: url(/wp-content/uploads/2017/02/Феи-Винкс.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-four-img {
+    background: url(/wp-content/uploads/2017/02/Барбоскины-Лиза.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-five-img {
+    background: url(/wp-content/uploads/2017/02/Барбоскины-Роза.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-six-img {
+    background: url(/wp-content/uploads/2017/02/Барбоскин-Малыш.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-seven-img {
+    background: url(/wp-content/uploads/2017/02/Белоснежка.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-eight-img {
+    background: url(/wp-content/uploads/2017/02/My-little-Pony-Pinky.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-nine-img {
+    background: url(/wp-content/uploads/2017/02/My-little-Pony-Рарити.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-ten-img {
+    background: url(/wp-content/uploads/2017/02/My-little-Pony-Искорка.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-eleven-img {
+    background: url(/wp-content/uploads/2017/02/My-little-Pony-Радуга-Дэш.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twelve-img {
+    background: url(/wp-content/uploads/2017/02/Холодное-Сердце-АННА.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-thirteen-img {
+    background: url(/wp-content/uploads/2017/02/Холодное-Сердце-Эльза.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-fourteen-img {
+    background: url(/wp-content/uploads/2017/02/Тролли-Розочка.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-fiveteen-img {
+    background: url(/wp-content/uploads/2017/02/Свинка-Пеппа.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-sixteen-img {
+    background: url(/wp-content/uploads/2017/02/Мини-Маус.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-seventeen-img {
+    background: url(/wp-content/uploads/2017/02/Жасмин-и-Алладин.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-eighteen-img {
+    background: url(/wp-content/uploads/2017/02/Трансформеры.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-nineteen-img {
+    background: url(/wp-content/uploads/2017/02/Фиксики-Симка-Нолик-и-Мася.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twenty-img {
+    background: url(/wp-content/uploads/2017/02/Щенячии-Патруль.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twentyone-img {
+    background: url(/wp-content/uploads/2017/02/Жасмин.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twentytwo-img {
+    background: url(/wp-content/uploads/2017/02/Хэллоу-Китти.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twentythree-img {
+    background: url(/wp-content/uploads/2017/02/Тачки.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twentyfour-img {
+    background: url(/wp-content/uploads/2017/02/Покемон-Пикачу.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twentyfive-img {
+    background: url(/wp-content/uploads/2017/02/Человек-Паук.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twentysix-img {
+    background: url(/wp-content/uploads/2017/02/Мальвина.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twentyseven-img {
+    background: url(/wp-content/uploads/2017/02/Кот-Матроскин.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twentyeight-img {
+    background: url(/wp-content/uploads/2017/02/Звездные-воины.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-twentynine-img {
+    background: url(/wp-content/uploads/2017/02/Дарт-Вэидер.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-thirty-img {
+    background: url(/wp-content/uploads/2017/02/Белыи-Кролик.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-thirtyone-img {
+    background: url(/wp-content/uploads/2017/02/Зверополис.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-thirtytwo-img {
+    background: url(/wp-content/uploads/2017/02/Маинкрафт.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-thirtythree-img {
+    background: url(/wp-content/uploads/2017/02/Лего-Ниндзяго.jpg) rgba(255,255,255,1) center/contain no-repeat;
+}
+
+.characters-img:before {
+    content: '';
+    position: absolute;
+    width: 40vh;
+    height: 40vh;
+    background: rgba(0,0,139,.2);
+    left: 0;
+    border-radius: 20px;
+}
+
+
+@media (orientation: landscape) {
+  .characters-missing-text {
+    line-height: 10vh !important;
+}
+}
+
+@media (max-device-width: 1023px) {
+.characters-box:nth-last-child(5), .characters-box:nth-last-child(4), .characters-box:nth-last-child(3) {
+    padding-bottom: 15vh;
+}
+}
+
+/*----------------ПАКЕТЫ-УСЛУГ--------------------*/
+
+#service-package {
+    background: rgba(46,187,227,1);
+}
+
+.services-package {
+	margin: 10vh 5vw;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.package-tariffs {
+	flex: 1 100%;
+	display: inline-flex;
+	flex-flow: row nowrap;
+}
+
+.base-tariff, .optimal-tariff, .premium-tariff {
+	flex: 1 30%;
+	flex-direction: column;
+	display: inline-flex;
+	margin: 0 1vh;
+}
+
+ul[class$="-tariff-text"] {
+    padding: 2vh;
+    height: 100%;
+    position: relative;
+    background: rgba(103,103,103,.4);
+    border-radius: 10px;
+}
+
+ul[class$="-tariff-text"] li:first-child {
+    border-bottom: 3px solid rgba(3,255,179,1);
+    text-align: center;
+    margin-bottom: 2vh;
+    padding: 1vh;
+}
+
+ul[class$="-tariff-text"] li h6 {
+    font-size: 2vmin !important;
+    line-height: 2.9vmin !important;
+}
+
+ul[class$="-tariff-text"] li:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+ul[class$="-tariff-text"] li:last-child h5 {
+    background: #00f;
+    padding: 2vh;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    font-size: 4vmin !important;
+    line-height: 8vmin !important;
+}
+
+ul[class$="-tariff-text"] li:nth-last-child(2) {
+    padding-bottom: 10vh;
+}
+
+@media (min-device-width: 1024px) and (orientation: landscape) {
+.services-package {
+    height: 100vh;
+}
+}
+
+@media (max-device-width: 1279px) and (orientation: portrait), (min-device-width: 1280px) and (orientation: portrait) {
+.services-package {
+	min-height: calc(100vh - 44px);
+}
+
+.package-tariffs {
+    max-width: 85%;
+    margin: auto;
+    flex-flow: row wrap;
+}
+
+.base-tariff, .optimal-tariff, .premium-tariff {
+    flex: 1 100%;
+    margin: 5vh 2vw;
+}
+
+ul[class$="-tariff-text"] li:last-child {
+    height: 8vh;
+    width: inherit;
+}
+
+ul[class$="-tariff-text"] li:last-child h5 {
+    position: absolute;
+    right: 0;
+    width: inherit;
+    border-radius: 20px 0 0 20px;
+    bottom: 2vh;
+}
+}
+
+@media (max-device-width: 1280px) and (orientation: portrait) {
+ul[class$="-tariff-text"] li h6 {
+    font-size: 3.5vmin !important;
+    line-height: 7vmin !important;
+}
+}
+
+@media (max-device-width: 1280px) and (orientation: landscape) {
+ul[class$="-tariff-text"] li h6 {
+    font-size: 2vmin !important;
+    line-height: 3vmin !important;
+}
+
+.base-tariff, .optimal-tariff, .premium-tariff {
+    max-height: 80vh;
+}
+}
+
+@media (min-device-width: 1280px) and (orientation: landscape) {
+ul[class$="-tariff-text"] {
+  height: 80%;
+}
+
+.base-tariff, .optimal-tariff, .premium-tariff {
+    max-height: 80vh;
+}
+}
+
+/*----------------ВЫПУСКНОЙ--------------------*/
+
+#graduation {
+    background: url(/wp-content/uploads/2017/02/graduation-background.svg) center/cover;
+}
+
+.graduation {
+	margin: 10vh 5vw;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.graduation-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 5.7vh;
+    margin: 0 auto;
+    border-bottom: 3px solid rgba(3,255,179,1);
+    text-shadow: 0 0 1vmin #00008b;
+    width: 30%;
+    background: rgba(0,0,139,.7);
+    padding: 1vmin;
+    border-radius: 20px 20px 0 0;
+}
+
+.graduation-subheader {
+    position: absolute;
+    background: rgba(0,0,139,.7);
+    width: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1vmin;
+    top: 12vh;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.graduation-container-one, .graduation-container-two, .graduation-container-three {
+	flex: 1 40%;
+	flex-direction: column;
+	text-align: center;
+	margin: 20vh 0 10vh;
+}
+
+.graduation-one-img, .graduation-two-img, .graduation-three-img {
+	height: 50vh;
+	margin: auto;
+	width: 50vh;
+  position: relative;
+}
+
+.graduation-one-img {
+      background: url(/wp-content/uploads/2017/02/vipusk_v_sadu.jpg)white center/70% no-repeat;
+}
+
+.graduation-two-img {
+      background: url(/wp-content/uploads/2017/02/vipusk_v_nach_klassah.jpg)white center/70% no-repeat;
+}
+
+.graduation-three-img {
+      background: url(/wp-content/uploads/2017/02/vipusk_v_9-11.jpg)white center/70% no-repeat;
+}
+
+.graduation-one-header, .graduation-two-header, .graduation-three-header {
+    margin: 2vh auto;
+    padding-top: 2vh;
+}
+
+div[class^="graduation-container-"] div[class$="-img"] * {
+    position: relative;
+    text-shadow: 0 0 15px #00008b;
+    max-width: 40vh;
+    margin: auto;
+}
+
+div[class^="graduation-container-"] div[class$="-img"]:before {
+    content: '';
+    background: rgba(0,0,139,.2);
+    height: 50vh;
+    width: 50vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+
+@media (max-device-width: 1023px) and (orientation: landscape) {
+  .graduation {
+    margin: 5vh 5vw;
+}
+}
+
+@media (max-device-width: 1023px) and (orientation: portrait), (min-device-width: 1024px) and (orientation: portrait) {
+.graduation-container-one, .graduation-container-three, .graduation-container-two {
+    flex: 1 100%;
+    margin: 5vh auto;
+}
+}
+
+@media (max-device-width: 767px) and (orientation: portrait) {
+div[class^="graduation-container-"] h4[class$="-header"] {
+    font-size: 6vmin !important;
+    line-height: 10vmin !important;
+}
+
+div[class^="graduation-container-"] ul[class$="-description"] h6 {
+    font-size: 3.5vmin !important;
+    line-height: 8vmin !important;
+}
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+div[class^="graduation-container-"] h4[class$="-header"] {
+    font-size: 4vmin !important;
+    line-height: 5vmin !important;
+}
+
+div[class^="graduation-container-"] ul[class$="-description"] h6 {
+    font-size: 2.5vmin !important;
+    line-height: 3.5vmin !important;
+}
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+div[class^="graduation-container-"] h4[class$="-header"] {
+    font-size: 6vmin !important;
+    line-height: 10vmin !important;
+}
+
+div[class^="graduation-container-"] ul[class$="-description"] h6 {
+    font-size: 2.5vmin !important;
+    line-height: 6vmin !important;
+}
+}
+
+@media (min-device-width: 1024px) and (orientation: landscape) {
+div[class^="graduation-container-"] h4[class$="-header"] {
+    font-size: 3.5vmin !important;
+    line-height: 8vmin !important;
+}
+
+div[class^="graduation-container-"] ul[class$="-description"] h6 {
+    font-size: 2vmin !important;
+    line-height: 4.5vmin !important;
+}
+}
+
+/*----------------ШОУ-ПРОГРАММЫ--------------------*/
+
+#show-events {
+    background: rgba(238,235,176,1);
+}
+
+.show-events-container {
+	margin: 10vh 5vw;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.show-event-one, .show-event-two, .show-event-three, .show-event-four, .show-event-five, .show-event-six {
+	flex: 1 30%;
+	flex-flow: column wrap;
+	text-align: center;
+	margin: 1.5vmax -2vmax;
+}
+
+.show-event-one-img, .show-event-two-img, .show-event-three-img, .show-event-four-img, .show-event-five-img, .show-event-six-img {
+	height: 35vh;
+	margin: auto;
+	width: 35vh;
+	padding: 1vmax;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+
+.show-event-one:hover .show-event-one-img, .show-event-two:hover .show-event-two-img, .show-event-three:hover .show-event-three-img, .show-event-four:hover .show-event-four-img, .show-event-five:hover .show-event-five-img, .show-event-six:hover .show-event-six-img, .show-event-one:active .show-event-one-img, .show-event-two:active .show-event-two-img, .show-event-three:active .show-event-three-img, .show-event-four:active .show-event-four-img, .show-event-five:active .show-event-five-img, .show-event-six:active .show-event-six-img {
+	background: blue !important;
+	transition: all 1s ease-in-out;
+}
+
+.show-event-one-description, .show-event-two-description, .show-event-three-description, .show-event-four-description, .show-event-five-description, .show-event-six-description {
+	position: relative;
+	top: 0;
+	opacity: 0;
+	transition: all .5s ease-in-out;
+}
+
+.show-event-one:hover .show-event-one-img h7[class*="-description"], .show-event-two:hover .show-event-two-img h7[class*="-description"], .show-event-three:hover .show-event-three-img h7[class*="-description"], .show-event-four:hover .show-event-four-img h7[class*="-description"], .show-event-five:hover .show-event-five-img h7[class*="-description"], .show-event-six:hover .show-event-six-img h7[class*="-description"], .show-event-one:active .show-event-one-img h7[class*="-description"], .show-event-two:active .show-event-two-img h7[class*="-description"], .show-event-three:active .show-event-three-img h7[class*="-description"], .show-event-four:active .show-event-four-img h7[class*="-description"], .show-event-five:active .show-event-five-img h7[class*="-description"], .show-event-six:active .show-event-six-img h7[class*="-description"] {
+	opacity: 1 !important;
+	transition-delay: 1s;
+	transition: all .5s ease-in-out;
+}
+
+.show-event-one-header, .show-event-two-header, .show-event-three-header, .show-event-four-header, .show-event-five-header, .show-event-six-header, .show-event-one-subheader, .show-event-two-subheader, .show-event-three-subheader, .show-event-four-subheader, .show-event-five-subheader, .show-event-six-subheader {
+	position: relative;
+	top: 14vh;
+	opacity: 1;
+	transition: all 1s ease-in-out;
+	text-shadow: 0 0 0.4vmin #00008b;
+}
+
+.show-event-one:hover h5[class*="-header"], .show-event-two:hover h5[class*="-header"], .show-event-three:hover h5[class*="-header"], .show-event-four:hover h5[class*="-header"], .show-event-five:hover h5[class*="-header"], .show-event-six:hover h5[class*="-header"], .show-event-one:hover h5[class*="-subheader"], .show-event-two:hover h5[class*="-subheader"], .show-event-three:hover h5[class*="-subheader"], .show-event-four:hover h5[class*="-subheader"], .show-event-five:hover h5[class*="-subheader"], .show-event-six:hover h5[class*="-subheader"], .show-event-one:active h5[class*="-header"], .show-event-two:active h5[class*="-header"], .show-event-three:active h5[class*="-header"], .show-event-four:active h5[class*="-header"], .show-event-five:active h5[class*="-header"], .show-event-six:active h5[class*="-header"], .show-event-one:active h5[class*="-subheader"], .show-event-two:active h5[class*="-subheader"], .show-event-three:active h5[class*="-subheader"], .show-event-four:active h5[class*="-subheader"], .show-event-five:active h5[class*="-subheader"], .show-event-six:active h5[class*="-subheader"] {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+div[class*=show-event] h7 {
+    font-size: 2vmin !important;
+    position: relative;
+    top: -5vh;
+    line-height: 2vmin;
+}
+
+div[class*=show-event] div[class*="-img"]:before {
+    content: '';
+    background: rgba(0,0,139,.2);
+    height: 35vh;
+    width: 35vh;
+    padding: 1vmax;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+
+.show-event-one-img {
+      background: url(/wp-content/uploads/2017/02/science_show.jpg) center/cover no-repeat;
+}
+
+.show-event-two-img {
+      background: url(/wp-content/uploads/2017/03/khim-show.png) center/cover no-repeat;
+}
+
+.show-event-three-img {
+      background: url(/wp-content/uploads/2017/02/snow_show.jpg) center/cover no-repeat;
+}
+
+.show-event-four-img {
+      background: url(/wp-content/uploads/2017/02/giant_bubbles_show.jpg) center/cover no-repeat;
+}
+
+.show-event-five-img {
+      background: url(/wp-content/uploads/2017/02/tesla_show.jpg) center/cover no-repeat;
+}
+
+.show-event-six-img {
+      background: url(/wp-content/uploads/2017/02/paper_show.jpg) center/cover no-repeat;
+}
+
+@media (max-device-width: 1023px) {
+  div[class*=show-event] h7 {
+    font-size: 3vmin !important;
+}
+}
+
+@media (max-device-width: 1023px) and (orientation: landscape) {
+.show-event-five-img, .show-event-four-img, .show-event-one-img, .show-event-six-img, .show-event-three-img, .show-event-two-img {
+    height: 60vh;
+    width: 60vh;
+}
+
+.show-event-one, .show-event-two, .show-event-three, .show-event-four, .show-event-five, .show-event-six {
+    flex: 1 50%;
+}
+
+div[class*=show-event] div[class*="-img"]:before {
+    height: 60vh;
+    width: 60vh;
+}
+
+.show-event-five, .show-event-four, .show-event-one, .show-event-six, .show-event-three, .show-event-two {
+    margin: 3.5vmax -2vmax;
+}
+
+.show-event-five-header, .show-event-five-subheader, .show-event-four-header, .show-event-four-subheader, .show-event-one-header, .show-event-one-subheader, .show-event-six-header, .show-event-six-subheader, .show-event-three-header, .show-event-three-subheader, .show-event-two-header, .show-event-two-subheader {
+    top: 25vh;
+}
+}
+
+@media (max-device-width: 1280px) and (orientation: portrait) {
+.show-event-one, .show-event-two, .show-event-three, .show-event-four, .show-event-five, .show-event-six {
+	flex: 1 100%;
+}
+
+  div[class*=show-event] h7 {
+    line-height: 4vmin;
+}
+}
+
+@media (max-device-width: 1280px) and (orientation: landscape) {
+  div[class*=show-event] h7 {
+    line-height: 4vmin;
+}
+}
+
+/*----------------ДОПОЛНЕНИЯ--------------------*/
+
+#additions {
+    background: url(/wp-content/uploads/2017/02/additions-background.svg) center/cover;
+}
+
+.addition-events-container {
+	margin: 10vh 5vw;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.addition-event-one, .addition-event-two, .addition-event-three, .addition-event-four, .addition-event-five, .addition-event-six, .addition-event-seven, .addition-event-eight, .addition-event-nine, .addition-event-ten {
+	flex: 1 30%;
+	flex-direction: column;
+	text-align: center;
+	margin: 1.5vmax -1vmax;
+}
+
+.addition-event-one-img, .addition-event-two-img, .addition-event-three-img, .addition-event-four-img, .addition-event-five-img, .addition-event-six-img, .addition-event-seven-img, .addition-event-eight-img, .addition-event-nine-img, .addition-event-ten-img {
+	height: 35vh;
+	margin: auto;
+	width: 35vh;
+	padding: 1vmax;
+}
+
+.addition-event-one-header, .addition-event-two-header, .addition-event-three-header, .addition-event-four-header, .addition-event-five-header, .addition-event-six-header, .addition-event-seven-header, .addition-event-eight-header, .addition-event-nine-header, .addition-event-ten-header {
+  position: relative;
+  top: 15vh;
+  text-shadow: 0 0 0.4vmin #00008b;
+}
+
+div[class*=addition-event] div[class*="-img"]:before {
+    content: '';
+    background: rgba(0,0,139,.2);
+    height: 35vh;
+    width: 35vh;
+    padding: 1vmax;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+
+.addition-event-one-img {
+      background: url(/wp-content/uploads/2017/02/magician.jpg) center/cover no-repeat;
+}
+
+.addition-event-two-img {
+      background: url(/wp-content/uploads/2017/02/animals.jpg) center/cover no-repeat;
+}
+
+.addition-event-three-img {
+      background: url(/wp-content/uploads/2017/02/sharzhist.jpg) center/cover no-repeat;
+}
+
+.addition-event-four-img {
+      background: url(/wp-content/uploads/2017/02/ragdolls.jpg) center/cover no-repeat;
+}
+
+.addition-event-five-img {
+      background: url(/wp-content/uploads/2017/02/aquagrimmer.jpg) center/cover no-repeat;
+}
+
+.addition-event-six-img {
+      background: url(/wp-content/uploads/2017/02/rostovie_kukli.jpg) center/cover no-repeat;
+}
+
+.addition-event-seven-img {
+      background: url(/wp-content/uploads/2017/02/photographer.jpg) center/cover no-repeat;
+}
+
+.addition-event-eight-img {
+      background: url(/wp-content/uploads/2017/02/video-cam.jpg) center/cover no-repeat;
+}
+
+.addition-event-nine-img {
+      background: url(/wp-content/uploads/2017/02/ukrashenie_sharami.jpg) center/cover no-repeat;
+}
+
+.addition-event-ten-img {
+      background: url(/wp-content/uploads/2017/02/shar_surprize.jpg) center/cover no-repeat;
+}
+/*----------------КАК-МЫ-РАБОТАЕМ--------------------*/
+
+#how-we-work {
+    min-height: 0 !important;
+    background: rgba(46,187,227,1);
+}
+
+.how-we-work {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+  height: 100%;
+  margin: 10vh auto;
+  flex: 1 100%;
+}
+
+.how-we-work-header {
+  top: 2vh !important;
+  padding-top: 5vh;
+}
+
+.how-we-work-elements {
+    display: inline-flex;
+    width: 15vmin;
+    height: 15vmin;
+    margin: 5vw;
+    position: relative;
+}
+
+.how-we-work-one {
+	background: url(/wp-content/uploads/2017/01/Phone-call.svg) center/cover no-repeat;
+}
+
+.how-we-work-two {
+	background: url(/wp-content/uploads/2017/01/event-theme.svg) center/cover no-repeat;
+}
+
+.how-we-work-three {
+	background: url(/wp-content/uploads/2017/01/choose-character.svg) center/cover no-repeat;
+}
+
+.how-we-work-four {
+	background: url(/wp-content/uploads/2017/01/details.svg) center/cover no-repeat;
+}
+
+.how-we-work-five {
+	background: url(/wp-content/uploads/2017/01/confetti.svg) center/cover no-repeat;
+}
+
+.how-we-work-elements:before {
+    color: rgba(255,255,255,1);
+    position: relative;
+    top: -12vh;
+    right: 0;
+    margin: auto;
+    font-size: 3vmin;
+    line-height: 4vmin;
+    left: -1vh;
+}
+
+.how-we-work-elements:after {
+    content: ''!important;
+    height: 15vmin;
+    width: 8vmin !important;
+    margin-left: 18vmin;
+    position: absolute;
+}
+
+.how-we-work-elements:nth-child(2n+1):after {
+    background: url(/wp-content/uploads/2017/03/arrow-top.svg) center/contain no-repeat;
+    top: -2vmin;
+}
+
+.how-we-work-elements:nth-child(2n):after {
+    background: url(/wp-content/uploads/2017/03/arrow-down.svg) center/contain no-repeat;
+    bottom: -2vmin;
+}
+
+.how-we-work-five:after {
+    display: none;
+}
+
+.how-we-work-one:before {
+    content: "Позвоните нам";
+}
+
+.how-we-work-two:before {
+    content: "Выберите тематику";
+}
+
+.how-we-work-three:before {
+    content: "Выберите персонажа";
+}
+
+.how-we-work-four:before {
+    content: "Уточните детали";
+}
+
+.how-we-work-five:before {
+    content: "Празднуйте!";
+}
+
+@media (max-device-width: 1023px) and (orientation: portrait) {
+  .how-we-work-elements:before {
+    top: -7vh;
+  }
+}
+
+
+/*----------------НАШИ-ПАРТНЕРЫ--------------------*/
+
+section#partners {
+    min-height: 0 !important;
+    background: rgba(255,255,255,1);
+}
+
+h3.our-partners-header {
+    font-size: 5vmin !important;
+    line-height: 7vmin !important;
+}
+
+.our-partners {
+	margin: 5vh 5vw;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	flex: 1 100%;
+}
+
+.our-partners-elements {
+	flex: 1 30%;
+	flex-direction: column;
+	text-align: center;
+	margin: 1.5vmax 0vmax;
+	height: 10vmax;
+}
+
+.our-partners-one {
+	background: url(/wp-content/uploads/2017/01/Coworking-logo.svg) center/contain no-repeat;
+}
+
+.our-partners-two {
+	background: url(/wp-content/uploads/2017/01/Chaihona-No-1-Common-Logo.png) center/contain no-repeat;
+}
+
+.our-partners-three {
+	background: url(/wp-content/uploads/2017/01/obed_buffet.png) center/contain no-repeat;
+}
+
+.our-partners-four {
+	background: url(/wp-content/uploads/2017/01/cafe_kanikuly.png) center/contain no-repeat;
+}
+
+.our-partners-five {
+	background: url(/wp-content/uploads/2017/03/yakitoriya.png) center/contain no-repeat;
+}
+
+.our-partners-six {
+	background: url(/wp-content/uploads/2017/01/cafe_begemot.jpg) center/contain no-repeat;
+}
+
+.our-partners-seven {
+	background: url(/wp-content/uploads/2017/01/samoteka1.svg) center/contain no-repeat;
+}
+
+.our-partners-eight {
+	background: url(/wp-content/uploads/2017/01/wegym.png) center/contain no-repeat;
+}
+
+.our-partners-nine {
+	background: url(/wp-content/uploads/2017/01/babycafe.jpg) center/contain no-repeat;
+}
+
+.our-partners-ten {
+	background: url(/wp-content/uploads/2017/01/schooltrip.jpg) center/50% no-repeat;
+}
+
+.our-partners-eleven {
+	background: url(/wp-content/uploads/2017/01/otel_na_kozachem.png) center/contain no-repeat;
+}
+
+.our-partners-twelve {
+	background: url(/wp-content/uploads/2017/03/Pesto.svg) center/contain no-repeat;
+}
+
+.our-partners-thirteen {
+	background: url(/wp-content/uploads/2017/03/OD.svg) center/contain no-repeat;
+}
+
+.our-partners-fourteen {
+	background: url(/wp-content/uploads/2017/03/logo_menza.svg) center/contain no-repeat;
+}
+
+/*----------------INSTAGRAM--------------------*/
+
+#insta {
+    min-height: inherit !important;
+    background: rgba(255,255,255,1);
+}
+
+.insta-feed-container {
+  margin: auto;
+}
+
+/*----------------FEEDBACK--------------------*/
+
+#feedback {
+    background: rgba(255,255,255,1);
+    min-height: inherit !important;
+}
+
+#feedback #disqus_thread {
+    width: 80%;
+    margin: auto;
+}
+
+.install.disqus-footer__item, .privacy.disqus-footer__item, .disqus-footer__logo {
+    display: none;
+}
+
+
+/*----------------PHONE-&-MAIL--------------------*/
+
+a[class=phone-number], a[class=mail] {
+    position: fixed;
+    bottom: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0 3px 35px 0 #00008b;
+    transform: translate3d(0,300%,0);
+    transition: transform .5s ease-in-out;
+}
+
+a[class=phone-number], a[class=phone-number] {
+    right: 5%;
+    background: url('/wp-content/uploads/2017/02/phone.svg') rgba(3,255,179,1) center/50% no-repeat;
+}
+
+a[class=mail] {
+    left: 5%;
+    background: url('/wp-content/uploads/2017/02/Mail.svg') rgba(3,255,179,1) center/70% no-repeat;
+}
+
+.phone-number:before {
+    content: '+79099873933';
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    padding: 10px;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    background: rgba(103,103,103,.8);
+    color: rgba(255,255,255,1) !important;
+    transform: translateY(65px);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.mail:before {
+    content: 'animatori_mironovoi@mail.ru';
+    position: absolute;
+    left: -20px;
+    top: -40px;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    background: rgba(103,103,103,.8);
+    color: rgba(255,255,255,1) !important;
+    transform: translateY(65px);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+a[class=phone-number]:hover:before, a[class=mail]:hover:before {
+  transform: translateY(0px) !important;
+  opacity: 1 !important;
+  transition: all .5s ease-in-out;
+}
+
+#navigation-sticky-wrapper.is-sticky ~ #special-offer a[class="phone-number"], #navigation-sticky-wrapper.is-sticky ~ #special-offer a[class="mail"] {
+	transform: translate3d(0,0,0) !important;
+	transition: transform .5s ease-in-out;
+}
+
+@media (max-device-width: 767px) and (orientation: portrait) {
+.phone-number:before {
+    left: -60px;
+}
+
+.mail:before {
+    font-size: 15px;
+}
+}
+
+/*----------------FOOTER--------------------*/
+
+footer {
+  display: none !important;
+}
