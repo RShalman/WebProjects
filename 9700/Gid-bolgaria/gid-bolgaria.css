@@ -1,0 +1,32 @@
+/*-----------СТИЛИ-БАННЕРОВ----------*/
+.first-banners {
+	display: flex;
+    flex: 1 auto;
+}
+
+.banner-container {
+    background: url(/wp-content/uploads/2017/05/Baner2.jpg) center/contain no-repeat;
+    height: 10vmin !important;
+    width: 21vmin;
+    margin: auto 5px;
+}
+
+.banner_1 {
+    flex: 1 35%;
+}
+
+.banner_2 {
+    flex: 1 35%;
+}
+
+.banner_3 {
+    flex: 1 35%;
+}
+
+.banner_4 {
+    flex: 1 20%;
+}
+
+.banner_5 {
+    flex: 1 25%;
+}
