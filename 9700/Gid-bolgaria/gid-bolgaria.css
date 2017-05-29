@@ -5,28 +5,115 @@
 }
 
 .banner-container {
-    background: url(/wp-content/uploads/2017/05/Baner2.jpg) center/contain no-repeat;
     height: 10vmin !important;
     width: 21vmin;
-    margin: auto 5px;
+    margin: auto 10px 0 10px;
+    box-shadow: 0 0 15px 0px rgba(103,103,103,0.65);
+    border-radius: 5px;
 }
 
 .banner_1 {
+	background: url(/wp-content/uploads/2017/05/Baner2.jpg) right/cover no-repeat;
     flex: 1 35%;
 }
 
 .banner_2 {
+	background: url(/wp-content/uploads/2017/05/Banner_Hotel_Aia_Kavaci.jpg) right/cover no-repeat;
     flex: 1 35%;
 }
 
 .banner_3 {
+	background: url(/wp-content/uploads/2017/05/Banner_Apart_Sozopol.jpg) right/cover no-repeat;
     flex: 1 35%;
 }
 
 .banner_4 {
+	background: url(/wp-content/uploads/2017/05/Rent_a_car_Bolgaria.jpg) center/cover repeat;
     flex: 1 20%;
 }
 
 .banner_5 {
+	background: url(/wp-content/uploads/2017/05/Baner2.jpg) right/cover no-repeat;
     flex: 1 25%;
+}
+
+/*-----------НАСТРОЙКА-КОНТЕЙНЕРА-БЛОКОВ-ЮТУБ-И-ОПИСАНИЯ----------*/
+
+.fl-node-592026459bb5d {
+    background: rgba(103,103,103,.15);
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 15px 0px rgba(103,103,103,0.65);
+}
+
+/*-----------РАСПОЛОЖЕНИЕ-ВИДЕО-БЛОКОВ-ЮТУБ----------*/
+
+.description-video-column div {
+    justify-content: space-around !important;
+}
+
+.youtube-video-1, .youtube-video-2 {
+	max-width: 90%;
+}
+
+/*-----------РАСПОЛОЖЕНИЕ-ВИДЕО-КАМЕРЫ-И-ПОГОДЫ----------*/
+
+.camera-and-weather-column div {
+    justify-content: space-between;
+    font-weight: 300 !important;
+}
+
+.camera-and-weather-column {
+    overflow: hidden;
+}
+
+/*-----------НАСТРОЙКИ-ВИДЕО-КАМЕРЫ----------*/
+
+.online-camera iframe, .youtube-video-1 iframe, .youtube-video-2 iframe {
+    border-radius: 4px;
+    box-shadow: 0 0 15px 0px rgba(103,103,103,0.65);
+}
+
+/*-----------НАСТРОЙКИ-БЛОКА-ПОГОДЫ----------*/
+
+.weather-container {
+	box-shadow: 0 0 15px 0px rgba(103,103,103,0.65);
+    border-radius: 4px;
+}
+
+.weather-container div[class*="fl-"], .weather-container {
+    height: 100% !important;
+    overflow: hidden;
+}
+
+.awesome-weather-forecast, .awesome-weather-current-temp {
+	text-align: center;
+	display: flex;
+    align-items: center;
+}
+
+.awesome-weather-current-temp strong {
+	width: 100%;
+}
+
+.awesome-weather-header {
+	text-align: center !important;
+    align-items: center;
+    display: flex;
+    padding: 5% 32%;
+}
+
+.awesome-weather-todays-stats div {
+    margin: 1vmin auto;
+}
+
+.awesome-weather-wrap.darken {
+    text-shadow: 0 0px 10px rgba(0,0,0,0.9) !important;
+}
+
+/*-----------НАСТРОЙКИ-БЛОКА-НОВОСТЕЙ----------*/
+
+.news-carousel-main {
+    border-radius: 4px;
+    box-shadow: 0 0 15px 0px rgba(103,103,103,0.65);
 }
