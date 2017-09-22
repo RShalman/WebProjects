@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'ITCKabelStd-Book';
+  src: url('ITCKabelStd-Book.eot?#iefix') format('embedded-opentype'),  url('ITCKabelStd-Book.otf')  format('opentype'),
+	     url('ITCKabelStd-Book.woff') format('woff'), url('ITCKabelStd-Book.ttf')  format('truetype'), url('ITCKabelStd-Book.svg#ITCKabelStd-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
