@@ -1,10 +1,20 @@
-@font-face {
+/* @font-face {
 	  font-family: 'KabelC';
 	  src: url('/wp-content/themes/bb-theme/fonts/KabelC-Book.eot');
 	  src: local('☺'), url('/wp-content/themes/bb-theme/fonts/KabelC-Book.woff') format('woff'), url('KabelC-Book.ttf') format('truetype'), url('fonts/KabelC-Book.svg') format('svg');
     font-weight: 300;
     font-style: normal;
-}
+} */
+
+@font-face {
+    font-family: 'Helvetica Neue Cyr Thin';
+    src: url('/wp-content/themes/bb-theme/fonts/HelveticaNeueCyr-Thin.eot');
+    src: url('/wp-content/themes/bb-theme/fonts/HelveticaNeueCyr-Thin.eot?#iefix') format('embedded-opentype'),
+    url('/wp-content/themes/bb-theme/fonts/HelveticaNeueCyr-Thin.woff') format('woff'),
+    url('/wp-content/themes/bb-theme/fonts/HelveticaNeueCyr-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
 
 /*------------------------------------PRELOADER-ANIMATION-------------------------------------*/
 @keyframes infinite-spinning {
@@ -108,7 +118,8 @@ h3 {
 }
 
 span.fl-heading-text {
-    background: url(/wp-content/uploads/2017/07/vmp-menu-underline.svg) 100% 90%/2em no-repeat;
+    /* Decided to remove all main headings right underline with red semi-circle img */
+    /* background: url(/wp-content/uploads/2017/07/vmp-menu-underline.svg) 100% 90%/2em no-repeat; */
     padding: .7em .5em !important;
 }
 
@@ -184,6 +195,15 @@ a.fl-post-more-link {
         margin: auto;
         padding: 0 !important;
     }
+
+    #about .announce-slider .fl-slide-cta-button a {
+        position: absolute;
+        max-width: 250px;
+        left: 0;
+        right: 0;
+        bottom: -25px;
+        z-index: 9999;
+    }
 }
 
 /*------UNDER-CONSTRUCTION-------*/
@@ -226,7 +246,7 @@ img.under-construction-logo {
 }
 
 body:not(.fl-builder-edit) * {
-    font-family: 'KabelC' !important;
+    font-family: 'Helvetica Neue Cyr Thin' !important;
     font-weight: 300;
 }
 
@@ -893,6 +913,10 @@ nav li > a {
 }
 
 /*-----------------------------------SCIENTIFIC-PAGE-------------------------------------------*/
+.scientific-height-100vh {
+    min-height: 100vh !important;
+}
+
 .science-video-container .fl-video {
     position: relative;
 }
@@ -922,7 +946,7 @@ nav li > a {
     border-radius: 10px;
 }
 
-.science-article-container a.fl-button {
+.science-article-container a.fl-button, .category-scientific-article .scientific-article-button {
     height: 60px !important;
     line-height: 55px !important;
     min-width: 250px;
@@ -931,6 +955,15 @@ nav li > a {
     font-size: 21px !important;
     background: transparent !important;
     transition: all .5s ease-in-out;
+}
+
+.category-scientific-article .scientific-article-button-container {
+    text-align: center;
+}
+
+.category-scientific-article .scientific-article-button {
+    padding: 1em 3em;
+    text-decoration: none;
 }
 
 .science-article-container .fl-callout-text {
@@ -955,12 +988,12 @@ nav li > a {
 }
 
 #science-articles-row .fl-post-grid-image {
-    width: 55% !important;
+    width: 65% !important;
     margin: auto;
 }
 
 #science-articles-row .fl-post-grid-title {
-    min-height: 5em !important;
+    min-height: 3em !important;
 }
 
 #science-articles-row .fl-post-grid-title a {
@@ -968,13 +1001,24 @@ nav li > a {
 }
 
 #science-articles-row .fl-post-grid {
-    margin: 0 !important;
+    margin: 0 auto !important;
+    max-width: 80vw;
 }
 
 #science-articles-row .fl-post-grid-post {
-    padding: 15px;
+    position: relative;
+    padding: 8px;
     height: auto !important;
     margin: 20px;
+}
+
+/* Applies to anchor with link placed across the whole article card (for every card). Makes a the whole card being a link */
+.all-news-page-card-link {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
 }
 
 .category-scientific-article .fl-post-title {
@@ -998,13 +1042,13 @@ nav li > a {
 
 @media (min-width: 768px) {
     #science-articles-row .fl-post-grid-content {
-        padding: 0 50px;
+        padding: 0 8px;
     }
 }
 
 @media (min-width: 1200px) {
     #science-articles-row .fl-post-grid-image {
-        padding: 30px 0
+        padding: 8px 0
     }
 }
 /*-----------------------------------ABOUT-COMPANY-ONEPAGE-------------------------------------*/
@@ -1303,12 +1347,60 @@ span.fl-post-feed-date {
 .fl-post-feed-content {
     line-height: 1.5em;
 }
-
-.fl-post-feed-post {
+/* Changed the way of displaying news elements */
+/* .fl-post-feed-post {
     overflow: hidden;
     max-height: 21.4em;
+} */
+
+.all-news-page .fl-post-grid-post {
+    background: transparent !important;
+    margin: 15% 15%;
+    display: flex;
+    flex-flow: row wrap;
 }
 
+/* Makes date div be the first in order */
+.all-news-page .fl-post-grid-image {
+    order: 2;
+    flex: 1 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.all-news-page .fl-post-grid-text {
+    order: 3;
+    height: 50%;
+}
+
+/* Makes news preview imgs equal height */
+/* .all-news-page .fl-post-grid-image img {
+    height: 100% !important;
+} */
+
+/* Equals all-news-page date div height (line) */
+.all-news-page .fl-post-grid-meta {
+    color: #503966 !important;
+    padding: 0 0 0 10px !important;
+    display: flex;
+    align-items: flex-end;
+}
+
+.all-news-page .fl-post-grid-title {
+    min-height: 5em;
+    padding-top: .5em;
+    display: flex;
+    align-items: flex-start;
+}
+
+.all-news-page .fl-post-grid-content p::first-letter {
+    padding-left: 25px;
+}
+
+.all-news-page .fl-post-grid-content p {
+    text-align: justify;
+}
 
 @media (max-device-width: 767px) and (orientation: portrait) {
 	.fl-post-feed-title {
@@ -1538,15 +1630,15 @@ span.fl-post-feed-date {
 }
 
 .catalogue-tabs-container div[id$="-label-4"]:before {
-    background: url(/wp-content/uploads/2017/07/vmp-nutrition.svg) center/contain no-repeat;
+    background: url(/wp-content/uploads/2018/02/vmp-regional-anaesthesia.svg) center/contain no-repeat;
 }
 
 .catalogue-tabs-container div[id$="-label-5"]:before {
-    background: url(/wp-content/uploads/2017/07/vmp-anastesy.svg) center/contain no-repeat;
+    background: url(/wp-content/uploads/2018/02/vmp-nutrition.svg) center/contain no-repeat;
 }
 
 .catalogue-tabs-container div[id$="-label-6"]:before {
-    background: url(/wp-content/uploads/2017/07/vmp-urinary.svg) center/contain no-repeat;
+    background: url(/wp-content/uploads/2018/02/vmp-urinary.svg) center/contain no-repeat;
 }
 
 	.tabs-text {
@@ -1918,11 +2010,28 @@ footer {
 
 /*-----------------------------------CATALOGUE------------------------------------*/
 
+/* Makes cat menu be not higher than 40px per element + aligns it. Except bottom banners */
+#mega-menu-max_mega_menu_1 li.mega-menu-item:not(.mega-banners-product-cat) a {
+    max-height: 40px;
+    display: flex !important;
+    align-items: center;
+}
+/* Makes arrows of cat menu get back normal to the right but in case of flexbox used on it's parent + aligns it*/
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1.mega-menu-vertical li.mega-align-bottom-right.mega-menu-item-has-children > a.mega-menu-link:after, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1.mega-menu-vertical li.mega-align-bottom-right.mega-menu-flyout li.mega-menu-item-has-children > a.mega-menu-link:after {
+    display: flex;
+    align-items: center;
+    right: 0;
+    top: 0;
+    position: absolute;
+    max-height: 40px;
+}
+
 a.mega-menu-link:after {
 	font-size: 2em;
 }
 
 .woocommerce .fl-sidebar-left {
+    position: absolute;
     padding: 0 !important;
     margin: 0;
 }
@@ -1940,6 +2049,7 @@ a.mega-menu-link:after {
 
 #maxmegamenu-2 {
     background: rgba(0,154,84,.75);
+    margin-bottom: 0;
 }
 
 #maxmegamenu-2 .fl-widget-title {
@@ -1991,7 +2101,7 @@ a.mega-menu-link:after {
 
 .woocommerce ul.products {
     padding: 0 1%;
-    display: flex;
+    display: block;
     justify-content: center;
     flex-flow: row wrap;
 }
@@ -2009,7 +2119,7 @@ nav.woocommerce-breadcrumb {
     margin: 1em !important;
 }
 
-mark.count, .woocommerce-result-count, .woocommerce footer, .woocommerce-ordering, .woocommerce ul.products li.product-category a img {
+mark.count, .woocommerce-result-count, .woocommerce footer, .woocommerce-ordering {
     display: none;
 }
 
@@ -2052,6 +2162,8 @@ span.page-numbers.current, a.page-numbers.current, span.page-numbers:hover, a.pa
     display: flex;
     text-align: center;
     flex-flow: row wrap;
+    float: left !important;
+    clear: none !important;
 }
 
 .woocommerce .product-category {
@@ -2092,12 +2204,17 @@ a[data-type="grid"] .fa-th:before {
 }
 
 ul.products li.type-product {
-    width: 30vmin !important;
-    height: 42vmin;
+    width: 25% !important;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    ul.products li.type-product {
+        width: 38% !important;
+    } 
 }
 
 li.product-category.product {
-    margin: 2em !important;
+    margin: 1.5em 0 !important;
 }
 
 li.berocket_lgv_list {
@@ -2109,8 +2226,9 @@ li.berocket_lgv_grid {
 }
 
 .woocommerce .products .product-category {
-	height: 25vmin !important;
-    width: 25vmin !important;
+    /* No need in height param anymore */
+	/* height: 25vmin !important; */  
+    width: 25% !important;
 }
 
 .woocommerce-loop-category__title {
@@ -2127,8 +2245,8 @@ li.berocket_lgv_grid {
     line-height: 2vmin !important;
     transition: all 1s;
 }
-
-li.product-category::before {
+/* Moved :before so to use casual img from woocomerce as a bg for categories */
+/* li.product-category::before {
     content: '';
     position: absolute;
     height: 25vmin;
@@ -2145,7 +2263,7 @@ li.product-category::before {
 li.product-category:hover::before {
     transform: rotate(360deg);
     transition: all 1s;
-}
+} */
 
 .woocommerce-loop-product__title {
     font-size: 1.5vmin !important;
@@ -2167,10 +2285,18 @@ a.woocommerce-loop-product__link {
     justify-content: center;
 }
 
-.woocommerce ul.products li.product a img {
-    width: 20vmin;
-    height: 20vmin;
+.woocommerce ul.products li.product-category a img {
+    width: auto;
+    height: 100%;
     flex: 1 100%;
+    position: absolute;
+    top: 0;
+    transition: all 1s;
+}
+
+.woocommerce ul.products li.product-category a:hover img {
+    transform: rotate(360deg);
+    transition: all 1s;
 }
 
 .woocommerce a.button {
@@ -2214,10 +2340,6 @@ div[id^="product-"] {
     	height: 20em;
 	}
 
-	.woocommerce ul.products li.product a img {
-    	height: 10em !important;
-	}
-
 	.woocommerce-loop-product__title {
     	font-size: 1em !important;
         line-height: 1em !important
@@ -2253,7 +2375,6 @@ div[id^="product-"] {
 	}
 
 	.fl-sidebar-left {
-    	position: fixed;
     	top: 70px;
 	}
 
@@ -2263,7 +2384,7 @@ div[id^="product-"] {
 	}
 
 	.woocommerce .products .product-category {
-    	height: 12em !important;
+    	height: 9em !important;
 	}
 
     nav.woocommerce-breadcrumb {
@@ -2295,6 +2416,11 @@ div[id^="product-"] {
 @media (max-width: 1200px) {
     #maxmegamenu-2 {
         padding-top: 0;
+        position: fixed;
+    }
+
+    #mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle .mega-toggle-block-1:after {
+        margin: 0 0 0 17px;
     }
 
     #maxmegamenu-2 #mega-toggle-block-1 {
@@ -2314,6 +2440,12 @@ div[id^="product-"] {
     }
 }
 
+@media (min-width: 1200px) {
+    .woocommerce .fl-content {
+        width: calc(100% - 300px);
+    }
+}
+
 @media (max-width: 1300px) {
     li.berocket_lgv_list {
         margin: 0 2em 2em 1em !important;
@@ -2324,6 +2456,11 @@ div[id^="product-"] {
 }
 
 @media (min-width: 1200px) {
+    #mega-menu-max_mega_menu_1 {
+        display: flex !important;
+        flex-flow: row wrap;
+    }
+
     .woocommerce .fl-page-content {
         padding-top: 75px;
     }
@@ -2347,54 +2484,261 @@ div[id^="product-"] {
 }
 
 /*-----------------------------------ALL-PRODUCT-PDF------------------------------------*/
-.mega-neonathology-product-cat {
+/* No more need to show only on main cat page
+
+.mega-banners-product-cat {
     display: none !important;
 }
 
-.term-products-catalogue .mega-neonathology-product-cat {
+.term-products-catalogue .mega-banners-product-cat {
     display: block !important;
+}*/
+
+@media (max-width: 1199px) {
+    .mega-banners-product-cat a {
+        text-align: center !important;
+        font-size: 1.5em !important;
+        line-height: 2em !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center
+    }
+
+    .mega-neonathology-product-cat a {
+        background: #A75479 !important;
+    }
+
+    .mega-vascular-therapy-product-cat a {
+        background: #462067 !important;
+    }
 }
 
-.mega-neonathology-product-cat {
-    height: calc(100vh - 436px) !important;
-    background: url(/wp-content/uploads/2017/10/neo-pdf-bg-4.png) white center/cover no-repeat !important;
+@media (max-width: 1023px) and (orientation: landscape) {
+    ul#mega-menu-max_mega_menu_1 {
+        height: calc(100vh - 140px) !important;
+        overflow-y: auto !important;
+        width: 100vw !important;
+    }
 }
 
-.mega-neonathology-product-cat a {
-    height: calc(100vh - 436px) !important;
-    color: transparent;
+@media (max-width: 1200px) {
+    #custom_html-2 {
+        display: none;
+    }
 }
-.mega-neonathology-product-cat a:hover {
+
+@media (min-width: 1201px) and (orientation: landscape) {
+    .mega-banners-product-cat {
+        display: none !important;
+    }
+
+    .banners-product-cat {
+        position: relative;
+    }
+
+    .banners-product-cat a {
+        display: flex;
+        text-decoration: none;
+        line-height: 3em;
+    }
+
+    .mega-neonathology-product-cat, .neonathology-product-cat {
+        background: url(/wp-content/uploads/2017/10/neo-pdf-bg-4.png) white center -6vh/25vh no-repeat !important;
+    }
+
+    .mega-vascular-therapy-product-cat, .vascular-therapy-product-cat {
+        background: url(/wp-content/uploads/2018/02/vascular-therapy-product-cat-logo.png) white center -6vh/25vh no-repeat !important;
+    }
+
+    .mega-qimono-product-cat, .qimono-product-cat {
+        background: url(/wp-content/uploads/2018/05/qimono-cat-logo.png) white center 0vh/15vh no-repeat !important;
+    }
+/* No need to use further. For now <a> tag height defines the whole height */
+    /* .mega-banners-product-cat, .banners-product-cat {
+        height: 25vh !important;
+        max-height: 25vh !important;
+    } */ 
+
+    .mega-banners-product-cat a, .banners-product-cat a {
+        height: calc((100vh - 356px)/3) !important;
+        max-height: 300px;
+        color: transparent !important;
+        text-align: center !important;
+        font-size: .9em !important;
+        justify-content: center;
+    }
+
+    .mega-banners-product-cat a:before, .banners-product-cat a:before {
+        content: 'Перейти к материалу';
+        color: rgba(0,154,84,1) !important;
+        width: 60%;
+        position: absolute !important;
+        bottom: 1em !important;
+        left: 0 !important;
+        right: 0;
+        display: block !important;
+        margin: auto !important;
+        font-size: .7em !important;
+        line-height: 2.5em !important;
+        font-family: inherit !important;
+        text-align: center;
+        border-radius: 1vmin !important;
+        background: transparent !important;
+        border: 2px solid rgba(0,154,84,1) !important;
+        transition: all .25s ease-in-out;
+    }
+}
+
+.mega-banners-product-cat a:hover, .banners-product-cat a:hover {
     background: rgba(0,154,84,.7) !important;
+    color: white !important;
  }
 
-.mega-neonathology-product-cat a:before {
-    content: 'Перейти к материалу';
-    color: rgba(0,154,84,1) !important;
-    width: 80%;
-    position: absolute !important;
-    bottom: 23% !important;
-    left: 0 !important;
-    right: 0;
-    display: block !important;
-    margin: auto !important;
-    font-size: 1.5em !important;
-    font-family: inherit !important;
-    text-align: center;
-    border-radius: 1vmin !important;
-    background: transparent !important;
-    border: 2px solid rgba(0,154,84,1) !important;
-    transition: all .15s ease-in-out;
-}
 
-.mega-neonathology-product-cat a:hover:before {
+.mega-banners-product-cat a:hover:before, .banners-product-cat a:hover:before {
     color: white !important;
     text-shadow: 0px 0 20px rgb(51, 51, 51);
     border: 2px solid transparent !important;
     bottom: 50% !important;
-    transition: all .15s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 
+/*-----------------------------------REGISTRATION-LICENSIES------------------------------------*/
+/* RU main container in woocommerce sidebar */
+#custom_html-3 {
+    margin-bottom: 0;
+}
+
+/* Hide button inside product card-page */
+.woocommerce.single-product .registration-licensies {
+    display: none;
+}
+
+.registration-licensies {
+    position: absolute;
+    left: 325px;
+    top: 115px;
+    width: 100%;
+    text-align: center;
+    color: rgba(0,154,84,1) !important;
+    font-size: .8em !important;
+    line-height: 2.5em !important;
+    border-radius: 1vmin !important;
+    background: white;
+    border: 2px solid rgba(0,154,84,1) !important;
+    transition: all .5s ease-in-out;
+    padding: 1em;
+    text-decoration: none !important;
+}
+
+.registration-licensies:hover {
+    color: white !important;
+    background: rgba(0,154,84,1) !important;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.registration-licensies-list {
+    position: fixed;
+    height: calc(100vh - 76px);
+    width: 100vw;
+    top: 76px;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background: rgba(0,154,84,0.75);
+    z-index: 1;
+    transition: .8s all ease-in-out;
+    transform: translateX(-100vw);
+    visibility: hidden;
+}
+
+.registration-licensies-list.openned-list {
+    transform: translateX(0);
+    visibility: visible;
+    overflow-y: auto;
+}
+
+span.registration-licensies-list-close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+span.registration-licensies-list-close:before {
+    content: '\f153';
+    font-family: 'dashicons' !important;
+    font-size: 55px;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.registration-licensies-item {
+    flex: 1 100%;
+}
+
+.registration-licensies-item a {
+    color: white !important;
+    font-size: .9em !important;
+    padding: .7em;
+    text-decoration: none;
+    float: left;
+    margin-left: 40vw;
+}
+
+.registration-licensies-item a:hover {
+    background: #009a54;
+    border-radius: 4px;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+    .registration-licensies {
+        top: 0;
+        left: 62px;
+        width: calc(100vw - 75px);
+        font-size: .8em !important;
+        line-height: 1.8em !important;
+        padding: 1em 1.5em;
+        margin: 6px;
+    }
+
+    .registration-licensies-item a {
+        font-size: .7em !important;
+        float: left;
+        margin-left: 35vw;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+    .registration-licensies {
+        top: 0;
+        left: calc(35vw - 70px);
+        width: 100vw;
+        max-width: 350px;
+        font-size: .8em !important;
+        line-height: 1.8em !important;
+        padding: 1em 2.5em;
+        margin: 6px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .registration-licensies {
+        left: 10px;
+        top: 80px;
+        width: auto;
+        font-size: .9em !important;
+        line-height: 1.1em !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .registration-licensies-list {
+        height: calc(100vh - 67px);
+        top: 69px;
+    }
+}
 
 /*-----------------------------------CATALOGUE-PRODUCT-PAGE------------------------------------*/
 
@@ -2475,17 +2819,17 @@ table.variations {
     width: 10em;
 }
 
-.product-table.double-header tr:nth-child(n+3):hover td:first-child {
+.product-table.double-header tr:nth-child(n+3):hover td:first-child, .product-table.double-code-column tr:nth-child(n+3):hover td:nth-child(2) {
     background: rgba(0,154,84,.4) !important;
 }
 
-.product-table.double-header tr:nth-child(n+3):hover td:nth-child(n+2) {
+.product-table.double-header:not(.double-code-column) tr:nth-child(n+3):hover td:nth-child(n+2), .product-table.double-code-column tr:nth-child(n+3):hover td:nth-child(n+3) {
     background: rgba(0,154,84,.8) !important;
     color: white !important;
     border: 1px solid rgba(0,154,84,.8) !important;
 }
 
-.product-table.double-header tr:nth-child(n+2) td:first-child a *, .product-table.double-header tr:not(:nth-child(2)):nth-child(n+1) td:first-child strong {
+.product-table.double-header tr:nth-child(n+2) td:first-child a *, .product-table.double-header tr:not(:nth-child(2)):nth-child(n+1) td:first-child strong, .product-table.double-code-column tr:not(:nth-child(2)):nth-child(n+1) td:nth-child(2) strong {
     color: rgba(0,154,84,1) !important;
 }
 
@@ -2515,7 +2859,7 @@ section.related.products {
 span.sku_wrapper {
     margin: 1em 0;
     font-weight: 900 !important;
-    font-size: 1.5em !important;
+    font-size: .8em !important;
     line-height: 1.5em !important;
     color: rgba(0,154,84,1) !important;
 }
@@ -2537,7 +2881,7 @@ form.variations_form.cart {
 }
 
 .amount-in-package {
-    font-size: 1.5em !important;
+    font-size: 1em !important;
     line-height: 3em !important;
     font-weight: 900 !important;
 }
@@ -2550,7 +2894,7 @@ form.variations_form.cart {
     z-index: 1;
 }
 
-@media (max-device-width: 767px) and (orientation: landscape) {
+@media (max-width: 767px) and (orientation: landscape) {
 	.woocommerce-loop-category__title {
     	text-indent: 5em;
     	padding: 4em !important;
@@ -2567,14 +2911,22 @@ form.variations_form.cart {
     }
     
     .woocommerce ul.products li.product a img {
-        margin: 5% 25% 5px !important;
+        margin: 2% 0 0 !important;
+    }
+
+    .tax-product_cat nav.woocommerce-breadcrumb {
+        margin: 10em auto 0 !important;
     }
 }
 
-@media (max-device-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait) {
 	.woocommerce-loop-category__title {
     	padding: 2em !important;
-	}
+    }
+    
+    .tax-product_cat nav.woocommerce-breadcrumb {
+        margin: 5em auto 0 !important;
+    }
 }
 
 @media (max-width: 767px) {
@@ -2587,6 +2939,7 @@ form.variations_form.cart {
     font-size: 0.7em !important;
     line-height: 4vmin !important;
     text-indent: 10px;
+    max-width: 50px;
 	}
 
 	li.product-category::before {
@@ -2598,11 +2951,11 @@ form.variations_form.cart {
     width: 100% !important;
 	}
 
-	.woocommerce ul.products li.product a img {
-    width: 20vmin;
-    height: 20vmin;
+	.woocommerce ul.products li.product-category a img {
+    width: 7em;
+    height: 8em;
     flex: auto;
-    margin: 5% 5% auto;
+    margin: 5% 0 auto;
 	}
 
 	.woocommerce .products .product {
@@ -2654,15 +3007,11 @@ form.variations_form.cart {
 	}
 
     .tax-product_cat nav.woocommerce-breadcrumb {
-        margin: 5em 0 0 auto !important
-    }
-
-    .tax-product_cat nav.woocommerce-breadcrumb {
         width: 80%;
     }
 }
 
-@media (max-device-width: 1200px) {
+@media (max-width: 1200px) {
 	.product-table td {
     padding: 0.5vmin;
 	}
@@ -2672,12 +3021,15 @@ form.variations_form.cart {
 	}
 
 	.fl-sidebar {
-    position: fixed;
     top: 69px;
 	}
 }
 
-@media (max-device-width: 1200px) and (orientation: portrait) {
+@media (max-width: 1200px) and (orientation: portrait) {
+    .woocommerce .fl-content {
+        top: 70px;
+    }
+
 	.woocommerce .fl-content .images {
     width: 90% !important;
     margin: 5% !important;
@@ -2705,12 +3057,13 @@ form.variations_form.cart {
     z-index: 9;
 	}
 }
-
-@media (max-device-width: 1200px) and (orientation: landscape) {
-	.woocommerce .fl-content {
+@media (min-width: 1024px) and (max-width: 1200px) and (orientation: landscape) {
+    .woocommerce .fl-content {
 		float: right;
 	}
+}
 
+@media (max-width: 1200px) and (orientation: landscape) {
 	.woocommerce .fl-content .images {
     width: 40% !important;
     margin: 5% !important;
@@ -2722,10 +3075,15 @@ form.variations_form.cart {
     height: 70px;
     padding: 24px !important;
     z-index: 9;
-	}
+    }
+    
+    #maxmegamenu-2 {
+        position: fixed;
+        max-width: 300px;
+    }
 }
 
-@media (min-device-width: 1200px) {
+@media (min-width: 1200px) {
 	.woocommerce .fl-content .images {
     width: 30% !important;
     margin: 5% !important;
@@ -2736,18 +3094,35 @@ form.variations_form.cart {
 	}
 
 	.fl-sidebar {
-    position: fixed;
-    min-width: 300px;
-	}
+    max-width: 300px;
+    width: 100% !important;
+    }
+
+    #maxmegamenu-2 {
+        position: fixed;
+        top: 0;
+        max-width: 300px;
+    }
+
+    #custom_html-2 {
+        position: fixed;
+        width: 300px;
+        top: 356px;
+    }
+    
+    .woocommerce ul.products li.product.type-product a img {
+        width: 20vmin;
+        height: 20vmin;
+    }
 }
 
-@media (min-device-width: 1200px) and (orientation: landscape) {
+@media (min-width: 1200px) and (orientation: landscape) {
 	.woocommerce .summary {
 	width: 60% !important;
 	}
 }
 
-@media (max-device-width: 767px) and (orientation: landscape) {
+@media (max-width: 767px) and (orientation: landscape) {
 	div[id^="product"] {
     margin-top: 5em;
 	}

@@ -1,0 +1,51 @@
+
+var $ = jQuery
+
+jQuery(document).ready(function() {
+  var width = jQuery(window).width();
+  activetab = jQuery('.fl-tabs').find('.fl-tab-active');
+  if ($('body').is('.page-id-51')) {
+    activetab.find('.fa').addClass('fa-plus');
+    activetab.removeClass('fl-tab-active');
+  }
+  
+//   Brings date div in All-News-Page from it's parent with content to upper level so to set the order
+    $('.fl-post-grid-post > .fl-post-grid-text > .fl-post-grid-meta').each(function() {
+        $(this).insertBefore($(this).parent());
+    });
+
+// Add anchor with link to whole news' card
+    $('#science-articles-row .fl-post-grid-image > a').each(function() {
+        $('<a class="all-news-page-card-link"></a>').insertBefore($(this).parent()).attr('href', $($(this)).attr('href'));
+    });
+
+// Adds Reg. Licensies window's ability to slide in and out
+    $('.registration-licensies').on('click', function() {
+        $('.registration-licensies-list').addClass('openned-list');
+    });
+
+    $('.registration-licensies-list-close').on('click', function() {
+        $(this).parent().removeClass('openned-list');
+    });
+
+
+    
+// ON DOCUMENT READY ENDS HERE!!!
+});
+
+
+
+$('[data-toggle=tab]').click(function(e){
+	if($(this).parent().hasClass('active')){
+  
+		e.preventDefault();
+        e.stopPropagation();
+    
+		$(this).parent().removeClass('active');
+    
+		$($(this).attr("href")).removeClass('active');
+		$($(this).attr("href")).removeClass('in');
+    
+		$(this).attr("aria-expanded", false);
+	}
+});
